@@ -1,0 +1,28 @@
+<h3>Add Product</h3>
+
+
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name of the product</label>
+        <input type="text" class="form-control" name="name"[(ngModel)]="product.name" placeholder="Name">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">product Quantity</label>
+        <input type="text" class="form-control" quantity="quantity" [(ngModel)]="product.quantity" placeholder="How many products in stock">
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Price</label>
+        <input type="text" class="form-control" price="price" [(ngModel)]="product.price" placeholder="price">
+    </div>
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Image URL</label>
+        <input type="text" class="form-control" image="image" [(ngModel)]="product.image" placeholder="image url">
+    </div>
+
+    <div class="mb-3">
+        <input type="button" value="Add Product" class="btn btn-dark" (click)="addProduct()" >
+    </div>
+</form>
+
+

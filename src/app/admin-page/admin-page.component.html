@@ -1,0 +1,26 @@
+
+<h2> User List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList">
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.username}}</td>
+            <td>
+                <a [routerLink]="['/users', user._id]" class="btn btn-secondary">View Detail</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<a routerLink="/add-product" class="btn btn-success">Add Product</a>

@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.product.name}}</td>
+            <td>{{item.product.price}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.product.price*item.quantity}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>{{total}}</td>
+        </tr>
+    </tfoot>
+</table>
+
+<input type="button" value="Buy Items" class="btn btn-outline-danger"  (click)="buyNow()"/>&nbsp;
+<a routerLink='/products' class="btn btn-outline-secondary">Explore More Products</a> &nbsp;
